@@ -63,14 +63,15 @@ dsh plugin --profile web add "git+https://github.com/xiatian-wuhan/dsh-skills-hu
 
 ### 通过插件市场索引
 
-本仓库同时是一份 DSH 插件市场索引（format 1）。在 DSH 里：
+本仓库同时是一份 DSH 插件市场索引（format 1）。在 DSH 里  **插件 → Discover → 索引源 → 添加** 以下任一地址：
 
-```
-插件 → Discover → 索引源 → 添加
-https://xiatian-wuhan.github.io/dsh-skills-hub/index.json
-```
+| 用途 | 地址 |
+| --- | --- |
+| 主地址（GitHub Pages） | `https://xiatian-wuhan.github.io/dsh-skills-hub/index.json` |
+| 备用（raw，立即可用） | `https://raw.githubusercontent.com/xiatian-wuhan/dsh-skills-hub/main/docs/index.json` |
+| 备用（jsDelivr 加速） | `https://cdn.jsdelivr.net/gh/xiatian-wuhan/dsh-skills-hub@main/docs/index.json` |
 
-或让 agent 使用 `plugin_market` 工具检索该索引。
+或让 agent 使用 `plugin_market` 工具检索该索引。发布新版本时运行 `node scripts/make-index.mjs` 更新索引（安装源会固定到该次提交）。
 
 ## 使用提示
 
