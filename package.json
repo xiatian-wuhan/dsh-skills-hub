@@ -1,0 +1,57 @@
+{
+  "name": "dsh-skills-hub",
+  "version": "0.3.1",
+  "description": "DeepSeek Harness 技能中枢（Skills Hub）：以「技能对模型上下文的作用」为核心，展示每个 skill 的目录成本/正文成本/截断与隐藏状态，预览模型实际收到的技能目录，一键从模型目录摘除（保留文件），并支持搜索、URL 导入与卸载。",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=0.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "skills",
+    "skill-hub",
+    "clawhub",
+    "skills-sh",
+    "plugin",
+    "dsh-plugin",
+    "context",
+    "skill-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiatian-wuhan/dsh-skills-hub.git"
+  },
+  "homepage": "https://github.com/xiatian-wuhan/dsh-skills-hub#readme",
+  "bugs": {
+    "url": "https://github.com/xiatian-wuhan/dsh-skills-hub/issues"
+  },
+  "icon": "icon.svg"
+}

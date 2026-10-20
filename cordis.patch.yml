@@ -1,0 +1,16 @@
+# dsh-skills-hub bundle patch — 把插件行插入 profile 组合树。
+#
+# 依赖服务（Host）：
+#   fs/shell        —— 技能目录扫描、mkdir、rm、curl 兜底下载
+#   web             —— 优先的 HTTP 拉取（ClawHub / GitHub / skills.sh）
+#   skills          —— 与官方技能注册表合并，补齐名称与介绍
+#   sandboxPolicy   —— 用户目录写入的宽策略、项目根定位
+#   webServer       —— 注册 /api/skills-hub/* 路由供客户端 fetch
+#
+# 客户端（dsh.client）：设置面板 Skills Hub 页，通过 fetch 调用上述路由。
+# 注意：行级 inject 只声明硬依赖，不写 inject: []。
+- insert:
+    - id: dsh-skills-hub
+      name: dsh-skills-hub
+      inject: [fs, shell, web, skills, sandboxPolicy, webServer]
+      config: {}
