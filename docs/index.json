@@ -89,11 +89,11 @@
       "versions": [
         {
           "version": "0.3.1",
-          "publishTimestamp": 1792479078,
+          "publishTimestamp": 1792479878,
           "source": {
             "type": "git",
             "url": "https://github.com/xiatian-wuhan/dsh-skills-hub.git",
-            "commit": "687a9de6b5dd6848aa7ad81973e45b282955ea90"
+            "commit": "aceb8b96d6fafe20e85a3c542821a949305791c9"
           },
           "engines": {
             "dsh": ">=0.2.0"
